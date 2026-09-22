@@ -1,3 +1,7 @@
+# VivaCare
+
+Panel d’administration de la plateforme VivaCare.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

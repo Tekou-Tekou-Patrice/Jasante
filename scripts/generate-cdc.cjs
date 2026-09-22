@@ -241,11 +241,11 @@ const children = [
   new Paragraph({
     spacing: { before: 120, after: 400 },
     alignment: AlignmentType.CENTER,
-    children: [run("JaSanté", { size: 48, bold: true, color: CYAN })],
+    children: [run("VivaCare", { size: 48, bold: true, color: CYAN })],
   }),
   spacer(200),
   kvTable([
-    ["Nom du projet", "JaSanté"],
+    ["Nom du projet", "VivaCare"],
     ["Nature du document", "Cahier des charges fonctionnel et technique"],
     ["Version", "1.0"],
     ["Date", "24 août 2026"],
@@ -255,7 +255,7 @@ const children = [
     ["Langues", "Français et anglais"],
   ]),
   spacer(300),
-  p("Ce document définit le besoin, le périmètre, les exigences, les contraintes et les critères d’acceptation de la plateforme JaSanté. Il sert de référence unique pour le développement, la validation et la soutenance du stage.", { italics: true, color: MUTED, align: AlignmentType.LEFT }),
+  p("Ce document définit le besoin, le périmètre, les exigences, les contraintes et les critères d’acceptation de la plateforme VivaCare. Il sert de référence unique pour le développement, la validation et la soutenance du stage.", { italics: true, color: MUTED, align: AlignmentType.LEFT }),
   new Paragraph({ children: [new PageBreak()] }),
 
   // TOC
@@ -276,7 +276,7 @@ const children = [
   new Paragraph({ children: [new PageBreak()] }),
 
   h1("1. Objet du document"),
-  p("Le présent cahier des charges décrit la plateforme JaSanté, composée d’une application mobile destinée aux bénéficiaires et d’un panel d’administration destiné aux équipes de l’organisation. Il précise le besoin métier, les fonctionnalités attendues, les exclusions, les contraintes techniques, le modèle de données, le calendrier de réalisation et les conditions de recette."),
+  p("Le présent cahier des charges décrit la plateforme VivaCare, composée d’une application mobile destinée aux bénéficiaires et d’un panel d’administration destiné aux équipes de l’organisation. Il précise le besoin métier, les fonctionnalités attendues, les exclusions, les contraintes techniques, le modèle de données, le calendrier de réalisation et les conditions de recette."),
   p("Il s’applique à l’ensemble du stage. Toute évolution de périmètre doit être consignée par avenant ou mise à jour versionnée de ce document."),
   h2("1.1 Documents de référence"),
   bullet("Plan de stage (phases, durées, jalons et livrables)."),
@@ -289,7 +289,7 @@ const children = [
   h2("2.1 Problématique"),
   p("L’accès à une information fiable, claire et non stigmatisante sur la santé sexuelle et reproductive (SSR) et la prévention des violences basées sur le genre (VBG) reste inégal. Les jeunes et les communautés concernées ont besoin d’un canal discret, bilingue et utilisable même en situation de réseau instable. Les organisations éducatives et associatives ont, de leur côté, besoin de publier, actualiser et retirer des contenus sans dépendre d’un développeur pour chaque modification."),
   h2("2.2 Réponse proposée"),
-  p("JaSanté est une plateforme d’éducation et d’orientation. L’application mobile permet de consulter des articles, des vidéos, des quiz d’auto-évaluation et un annuaire de ressources d’aide, sans créer de compte. Le panel web permet à un administrateur authentifié de gérer ces contenus, de les publier et de les retirer. Une base unique alimente les deux interfaces : seuls les contenus publiés sont visibles sur le mobile."),
+  p("VivaCare est une plateforme d’éducation et d’orientation. L’application mobile permet de consulter des articles, des vidéos, des quiz d’auto-évaluation et un annuaire de ressources d’aide, sans créer de compte. Le panel web permet à un administrateur authentifié de gérer ces contenus, de les publier et de les retirer. Une base unique alimente les deux interfaces : seuls les contenus publiés sont visibles sur le mobile."),
   h2("2.3 Principes directeurs"),
   numbered("Anonymat du bénéficiaire : aucun compte utilisateur n’est exigé sur l’application mobile.", "principes"),
   numbered("Maîtrise éditoriale : l’organisation publie et retire les contenus sans intervention technique quotidienne.", "principes"),
@@ -591,7 +591,7 @@ const children = [
     [
       ["SSR", "Santé sexuelle et reproductive"],
       ["VBG", "Violences basées sur le genre"],
-      ["JaSanté", "Nom de la plateforme (application mobile + panel + backend)"],
+      ["VivaCare", "Nom de la plateforme (application mobile + panel + backend)"],
       ["Bénéficiaire / utilisateur", "Personne qui consulte l’application sans compte"],
       ["Administrateur", "Personne autorisée à gérer les contenus via le panel"],
       ["Brouillon", "Contenu enregistré, non visible sur l’application"],
@@ -605,12 +605,12 @@ const children = [
   ),
   caption("Tableau 13 — Glossaire"),
   spacer(300),
-  p("Fin du cahier des charges — JaSanté v1.0 — 24 août 2026.", { italics: true, color: MUTED, align: AlignmentType.CENTER }),
+  p("Fin du cahier des charges — VivaCare v1.0 — 24 août 2026.", { italics: true, color: MUTED, align: AlignmentType.CENTER }),
 ];
 
 const doc = new Document({
-  creator: "Stage ICT4D — JaSanté",
-  title: "Cahier des charges — JaSanté",
+  creator: "Stage ICT4D — VivaCare",
+  title: "Cahier des charges — VivaCare",
   description:
     "Cahier des charges du stage : application mobile et panel d’administration pour l’éducation à la santé sexuelle et reproductive et la prévention des VBG.",
   styles: {
@@ -678,7 +678,7 @@ const doc = new Document({
               spacing: { after: 120 },
               tabStops: [{ type: TabStopType.RIGHT, position: TabStopPosition.MAX }],
               children: [
-                run("JaSanté  —  Cahier des charges", { size: 16, color: TEAL, bold: true }),
+                run("VivaCare  —  Cahier des charges", { size: 16, color: TEAL, bold: true }),
                 run("\t"),
                 run("Stage ICT4D", { size: 16, color: MUTED }),
               ],
@@ -708,12 +708,9 @@ const doc = new Document({
   ],
 });
 
-const outDir = "C:\\Users\\patri\\Documents\\ICT4D\\stage";
-const outFile = path.join(outDir, "Cahier_des_charges_JaSante.docx");
+const outDir = path.join(__dirname, "..");
+const outFile = path.join(outDir, "Cahier_des_charges_VivaCare.docx");
 Packer.toBuffer(doc).then((buffer) => {
   fs.writeFileSync(outFile, buffer);
-  const copy = path.join("C:\\Users\\patri\\Documents\\ICT4D\\stage\\JaSante_Admin", "Cahier_des_charges_JaSante.docx");
-  fs.writeFileSync(copy, buffer);
   console.log("Wrote", outFile);
-  console.log("Copy", copy);
 });

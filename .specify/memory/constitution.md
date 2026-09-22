@@ -6,7 +6,7 @@ Sync Impact Report
 - Removed sections: none.
 - Follow-up TODOs: TODO(RATIFICATION_DATE): original adoption date was not available.
 -->
-# JaSante Admin Constitution
+# VivaCare Constitution
 
 ## Core Principles
 
